@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="web_standard" name="shell-type" />
+  <title>Pizza Express Chauvin | 193 Frames Animation &amp; Menu</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-tint": "#ffb4ab",
+            "tertiary": "#d1c79d",
+            "surface-bright": "#323949",
+            "on-secondary": "#472a00",
+            "surface-variant": "#2e3545",
+            "on-surface-variant": "#e4beb9",
+            "error-container": "#93000a",
+            "surface-container-highest": "#2e3545",
+            "tertiary-fixed-dim": "#d1c79d",
+            "on-secondary-fixed-variant": "#653e00",
+            "on-background": "#dce2f7",
+            "secondary-container": "#ee9800",
+            "outline": "#ab8985",
+            "secondary-fixed-dim": "#ffb95f",
+            "on-tertiary-container": "#453f20",
+            "on-primary-container": "#ffcdc7",
+            "primary": "#ffb4ab",
+            "on-secondary-fixed": "#2a1700",
+            "surface": "#0c1322",
+            "surface-container": "#191f2f",
+            "secondary": "#ffb95f",
+            "primary-fixed-dim": "#ffb4ab",
+            "on-tertiary-fixed": "#201c02",
+            "on-primary": "#690005",
+            "on-primary-fixed": "#410002",
+            "surface-dim": "#0c1322",
+            "outline-variant": "#5b403d",
+            "background": "#0c1322",
+            "inverse-surface": "#dce2f7",
+            "on-error-container": "#ffdad6",
+            "surface-container-lowest": "#070e1d",
+            "on-secondary-container": "#5b3800",
+            "on-tertiary": "#363113",
+            "inverse-primary": "#b91c1c",
+            "inverse-on-surface": "#293040",
+            "on-tertiary-fixed-variant": "#4d4727",
+            "secondary-fixed": "#ffddb8",
+            "on-error": "#690005",
+            "error": "#ffb4ab",
+            "on-surface": "#dce2f7",
+            "primary-container": "#b91c1c",
+            "surface-container-low": "#141b2b",
+            "tertiary-container": "#b4ab84",
+            "primary-fixed": "#ffdad6",
+            "tertiary-fixed": "#ede3b8",
+            "surface-container-high": "#232a3a",
+            "on-primary-fixed-variant": "#93000b"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "gutter-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "margin": "3rem",
+            "space-md": "1rem",
+            "space-xxl": "4rem",
+            "space-xl": "2.5rem",
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem"
+          },
+          fontFamily: {
+            "body-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Playfair Display"],
+            "headline-lg": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "display-hero": ["Playfair Display"],
+            "title-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "display-hero-mobile": ["Playfair Display"],
+            "body-lg": ["Plus Jakarta Sans"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased min-h-screen" style="background-color: #000000 !important;">
+
+  <!-- Preloader Screen -->
+  <div id="loader" class="loader-overlay">
+    <div class="loader-content">
+      <div class="pizza-icon-spin">🍕</div>
+      <h2 class="loader-title">FIRING UP THE WOOD HEARTH</h2>
+      <p class="loader-subtitle">Buffering 193 cinema scroll frames...</p>
+      <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <div class="progress-stats">
+        <span id="progress-percent">0%</span>
+        <span id="progress-frames">0 / 193 Frames</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRANSPARENT NAVIGATION BAR AT THE TOP -->
+  <header id="main-header" class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)] border-b border-white/5 transition-all duration-300">
+    <div class="h-16 max-w-[1360px] mx-auto px-gutter flex items-center justify-between">
+      
+      <!-- Brand Logo / Scroll to Top -->
+      <a href="#scroll-hero" class="flex items-center gap-space-md group cursor-pointer" onclick="smoothScrollTo('#scroll-hero', event)">
+        <span class="material-symbols-outlined text-secondary text-2xl group-hover:rotate-12 transition-transform">local_pizza</span>
+        <span class="font-headline-sm text-primary tracking-tight">Pizza Express Chauvin</span>
+      </a>
+
+      <!-- Desktop Navigation Menu (Scrolls to Specific Menu Categories & Sections) -->
+      <nav class="hidden lg:flex items-center gap-2" id="desktop-nav">
+        <a class="nav-link font-bold rounded-full px-3.5 py-1.5 text-label-md transition-colors text-on-surface-variant hover:text-on-surface" href="#scroll-hero" onclick="smoothScrollTo('#scroll-hero', event)">Animation</a>
+        <a class="nav-link font-bold rounded-full px-3.5 py-1.5 text-label-md transition-colors text-on-surface-variant hover:text-on-surface" href="#menu-section" onclick="navigateToCategory('all', event)">Full Menu</a>
+        <a class="nav-link font-bold rounded-full px-3.5 py-1.5 text-label-md transition-colors text-on-surface-variant hover:text-on-surface" href="#menu-section" onclick="navigateToCategory('pizza', event)">Specialty Pizzas</a>
+        <a class="nav-link font-bold rounded-full px-3.5 py-1.5 text-label-md transition-colors text-on-surface-variant hover:text-on-surface" href="#menu-section" onclick="navigateToCategory('poboys', event)">Po-Boys</a>
+        <a class="nav-link font-bold rounded-full px-3.5 py-1.5 text-label-md transition-colors text-on-surface-variant hover:text-on-surface" href="#menu-section" onclick="navigateToCategory('turnovers', event)">Turnovers</a>
+        <a class="nav-link font-bold rounded-full px-3.5 py-1.5 text-label-md transition-colors text-on-surface-variant hover:text-on-surface" href="#menu-section" onclick="navigateToCategory('sides', event)">Sides &amp; Wings</a>
+        <a class="nav-link font-bold rounded-full px-3.5 py-1.5 text-label-md transition-colors text-on-surface-variant hover:text-on-surface" href="#location-section" onclick="smoothScrollTo('#location-section', event)">Chauvin Location</a>
+      </nav>
+
+      <!-- Right Action Items (Cart Trigger + Call Button + Mobile Hamburger) -->
+      <div class="flex items-center gap-space-md">
+        <!-- Interactive Cart Trigger Button -->
+        <a class="relative flex items-center gap-2 bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant/30 hover:border-secondary transition-all cursor-pointer shadow-sm" data-path="cart" href="#" onclick="toggleCart(); return false;">
+          <span class="material-symbols-outlined text-secondary text-lg">local_pizza</span>
+          <span class="text-label-md text-on-surface cart-nav-count">0 items</span>
+          <span class="absolute -top-1 -right-1 bg-primary text-on-primary text-label-sm w-auto px-1.5 h-5 rounded-full flex items-center justify-center font-bold cart-nav-total">$0</span>
+        </a>
+
+        <!-- Call to Order Button in Header -->
+        <a class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-secondary text-on-secondary font-bold text-label-md hover:bg-secondary-fixed transition-all shadow-md" href="tel:19855943112">
+          <span class="material-symbols-outlined text-sm">call</span> (985) 594-3112
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="lg:hidden p-2 rounded-lg text-on-surface hover:bg-surface-container-high transition-colors" onclick="toggleMobileNav()" aria-label="Toggle navigation">
+          <span id="mobile-menu-icon" class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Menu -->
+    <div id="mobile-nav-panel" class="lg:hidden hidden bg-surface-container/95 backdrop-blur-xl border-b border-outline-variant/20 px-6 py-4 transition-all">
+      <div class="flex flex-col gap-2">
+        <a class="mobile-nav-link py-2 px-3 rounded-lg text-label-md text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-all" href="#scroll-hero" onclick="smoothScrollTo('#scroll-hero', event); closeMobileNav();">Animation &amp; Story</a>
+        <a class="mobile-nav-link py-2 px-3 rounded-lg text-label-md text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-all" href="#menu-section" onclick="navigateToCategory('all', event); closeMobileNav();">The Full Menu</a>
+        <a class="mobile-nav-link py-2 px-3 rounded-lg text-label-md text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-all" href="#menu-section" onclick="navigateToCategory('pizza', event); closeMobileNav();">Specialty Pizzas</a>
+        <a class="mobile-nav-link py-2 px-3 rounded-lg text-label-md text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-all" href="#menu-section" onclick="navigateToCategory('poboys', event); closeMobileNav();">Oven Baked Po-Boys</a>
+        <a class="mobile-nav-link py-2 px-3 rounded-lg text-label-md text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-all" href="#menu-section" onclick="navigateToCategory('turnovers', event); closeMobileNav();">Turnovers</a>
+        <a class="mobile-nav-link py-2 px-3 rounded-lg text-label-md text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-all" href="#menu-section" onclick="navigateToCategory('sides', event); closeMobileNav();">Sides, Wings &amp; Drinks</a>
+        <a class="mobile-nav-link py-2 px-3 rounded-lg text-label-md text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-all" href="#location-section" onclick="smoothScrollTo('#location-section', event); closeMobileNav();">Chauvin Location &amp; Delivery</a>
+        <a class="mobile-nav-link py-2 px-3 rounded-lg text-label-md text-secondary font-bold hover:bg-surface-container-high transition-all flex items-center gap-2" href="tel:19855943112">
+          <span class="material-symbols-outlined text-sm">call</span> Call Kitchen: (985) 594-3112
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full bg-surface">
+    <!-- 193 FRAMES CINEMA SCROLL ANIMATION SECTION -->
+    <section id="scroll-hero" class="scroll-track">
+      <div class="sticky-viewport">
+        <!-- Canvas Rendering 193 Cinema Frames -->
+        <div class="canvas-wrapper">
+          <canvas id="pizza-canvas"></canvas>
+          <div class="canvas-vignette"></div>
+          <div class="canvas-ember-glow"></div>
+        </div>
+
+        <!-- Heading: CRUST TO CRAVE | Subheading: Freshly Baked. Loaded with Love. (Fades out at 30% scroll) -->
+        <div id="hero-title-overlay" class="hero-title-container">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-high/90 text-secondary shadow-lg backdrop-blur-md mb-4 border border-secondary/20">
+            <span class="material-symbols-outlined text-[16px] animate-pulse text-secondary">local_fire_department</span>
+            <span class="font-label-sm uppercase tracking-widest text-[11px] font-bold">Wood-Fired Neapolitan Craft</span>
+          </div>
+          <h1 class="hero-main-title font-headline-lg font-bold tracking-tight text-on-surface uppercase">
+            CRUST TO CRAVE
+          </h1>
+          <p class="hero-sub-title font-body-lg text-secondary italic font-medium mt-2">
+            Freshly Baked. Loaded with Love.
+          </p>
+        </div>
+
+        <!-- Animated Scroll Prompt (Fades out when user begins scrolling) -->
+        <div id="scroll-prompt" class="scroll-indicator-hint flex flex-col items-center gap-1 text-secondary/80">
+          <span class="text-[11px] font-bold tracking-widest uppercase font-label-sm">Scroll to Bake</span>
+          <span class="material-symbols-outlined text-[22px] animate-bounce text-secondary">keyboard_double_arrow_down</span>
+        </div>
+
+        <!-- High-Quality Cinema Baking Progress Scrubber -->
+        <div id="scroll-timeline" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-3 px-4 py-2 rounded-full bg-black/70 backdrop-blur-md border border-white/10 text-label-xs text-on-surface pointer-events-none transition-all duration-300 opacity-0">
+          <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          <span id="scrub-status" class="uppercase tracking-widest text-[11px] font-bold text-secondary font-label-sm">Baking: 0%</span>
+          <div class="w-28 h-1.5 bg-white/15 rounded-full overflow-hidden">
+            <div id="scrub-bar" class="h-full bg-gradient-to-r from-primary to-secondary transition-all duration-75" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL RESTAURANT MENU AND CONTENT BELOW SCROLL ANIMATION -->
+    <div class="flex flex-col w-full text-on-surface">
+      <!-- Hero Intro Banner -->
+      <div class="relative w-full bg-cover bg-center py-20 px-gutter flex flex-col items-center justify-center text-center overflow-hidden" data-alt="Dark moody photography of a wood-fired artisanal pizza glowing under warm amber light with bubbling mozzarella and fresh basil in Chauvin Louisiana." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBPjysbEpL6ZT1MpOYCP4_TJfJj0WC0Rd17yc4kRJTPg0V69FjJEj3RSfmr7GDZsKGl26m4PkfUIcKNLM01dZ4ZrXCkmmjcSXLT7urwAIVCeC09DAPf8YVhGxoGMHTRkxbeBJsxyrpYEI6CUihzpXvWk0CryRfsPPvUTnZ-OLLGn4SaqWxy9gC-avwWT0MjQyEAyXHHdAm3BSqXd__UQnrs7OtbOVOOTDdbScoxdyA')">
+        <div class="absolute inset-0 bg-surface/85 backdrop-blur-sm"></div>
+        <div class="relative z-10 max-w-3xl mx-auto flex flex-col items-center gap-space-md">
+          <span class="px-4 py-1 rounded-full bg-primary-container text-on-primary-container text-label-sm uppercase tracking-widest font-bold">Louisiana Soul Since 1994</span>
+          <h1 class="font-headline-lg md:text-display-hero text-on-surface">Pizza Express Chauvin</h1>
+          <p class="text-body-lg text-outline max-w-xl">Wood-fired Neapolitan pies, oven-baked po-boys, and golden turnovers crafted with local flavor at 5534 Highway 56.</p>
+          <div class="flex flex-wrap items-center justify-center gap-space-md mt-space-md">
+            <a class="px-6 py-3 rounded-full bg-primary text-on-primary font-bold text-label-lg hover:bg-primary-container transition-all shadow-[0_0_20px_rgba(185,28,28,0.4)]" href="#menu-section" onclick="smoothScrollTo('#menu-section', event)">Explore Menu</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="max-w-[1360px] mx-auto px-gutter w-full py-margin flex flex-col gap-space-xxl">
+        <!-- 3 Pillars Features -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+          <div class="bg-surface-container-low p-space-lg rounded-xl flex items-center gap-space-md reveal-on-scroll">
+            <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined">local_fire_department</span>
+            </div>
+            <div>
+              <h3 class="text-title-md text-on-surface">Wood-Fired Hearth</h3>
+              <p class="text-body-sm text-outline">Blistered crusts cooked at 900°F.</p>
+            </div>
+          </div>
+          <div class="bg-surface-container-low p-space-lg rounded-xl flex items-center gap-space-md reveal-on-scroll">
+            <div class="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center text-secondary">
+              <span class="material-symbols-outlined">schedule</span>
+            </div>
+            <div>
+              <h3 class="text-title-md text-on-surface">Fast Local Delivery</h3>
+              <p class="text-body-sm text-outline">Serving Chauvin &amp; surrounding bayous.</p>
+            </div>
+          </div>
+          <div class="bg-surface-container-low p-space-lg rounded-xl flex items-center gap-space-md reveal-on-scroll">
+            <div class="w-12 h-12 rounded-full bg-tertiary/20 flex items-center justify-center text-tertiary">
+              <span class="material-symbols-outlined">verified</span>
+            </div>
+            <div>
+              <h3 class="text-title-md text-on-surface">Fresh Daily Dough</h3>
+              <p class="text-body-sm text-outline">Hand-tossed sourdough made fresh.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- THE FULL MENU SECTION (#menu-section) -->
+        <div class="flex flex-col gap-space-xl pt-4" id="menu-section">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md border-b border-outline-variant/20 pb-space-md">
+            <div>
+              <span class="text-label-sm text-secondary uppercase tracking-wider">Our Offerings</span>
+              <h2 class="font-headline-md md:text-headline-lg text-on-surface">The Full Menu</h2>
+            </div>
+            <!-- Filter Pills -->
+            <div class="flex flex-wrap gap-2">
+              <button class="px-4 py-2 rounded-full bg-primary text-on-primary text-label-md font-bold menu-filter-btn" data-category="all" onclick="filterMenu('all')">All</button>
+              <button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-label-md font-bold menu-filter-btn" data-category="pizza" onclick="filterMenu('pizza')">Specialty Pizzas</button>
+              <button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-label-md font-bold menu-filter-btn" data-category="poboys" onclick="filterMenu('poboys')">Oven Baked Po-Boys</button>
+              <button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-label-md font-bold menu-filter-btn" data-category="turnovers" onclick="filterMenu('turnovers')">Turnovers</button>
+              <button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-label-md font-bold menu-filter-btn" data-category="sides" onclick="filterMenu('sides')">Sides &amp; Wings</button>
+              <button class="px-4 py-2 rounded-full bg-surface-container-high text-on-surface-variant text-label-md font-bold menu-filter-btn" data-category="drinks" onclick="filterMenu('drinks')">Drinks &amp; Desserts</button>
+            </div>
+          </div>
+
+          <!-- Menu Grid (15 Items) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="menu-grid">
+            
+            <!-- 1. Meat Lovers Pizza (Interactive Size Selectors) -->
+            <div class="menu-item pizza bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcF_Ep4X8ulUNBs8hkSf-EyA3oJ2SUl_09PaE1dLiPOFnaMFKsnAAA5ffNx_ketIeQOx8jX_0QBGvtL3ij6kKFCc2Sqc1_266HdUI246q3XDUntlf7rRNfRf3WLex7v8NRmBR7Rk6430St96-saXBXPmlTc_jqyQ8SkYSPvfSTPMW8xNJs6gHlZSbN2oMYNJIcdceVLZFIQ4INIvfS91wzO3EedO6KBiqlB-1sBto')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-secondary">Specialty</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <h3 class="font-headline-sm text-on-surface">Meat Lovers</h3>
+                    <span class="font-headline-sm text-secondary font-bold text-title-lg" id="price-Meat-Lovers">$17.75</span>
+                  </div>
+                  <p class="text-body-sm text-outline mt-1 mb-3">Pepperoni, ham, sausage and beef with homemade pizza sauce, mozzarella &amp; provolone cheese.</p>
+                </div>
+                <!-- Size Selector (Small, Med, Large) -->
+                <div class="space-y-3 pt-2 border-t border-outline-variant/10">
+                  <div class="flex items-center justify-between text-body-sm">
+                    <span class="text-outline text-xs">Crust Size:</span>
+                    <div class="flex items-center gap-1.5 size-selector-group" data-pizza="Meat Lovers">
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-semibold bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" onclick="selectPizzaSize('Meat Lovers', 'Small', 14.60, this)">
+                        Small $14.60
+                      </button>
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-bold bg-secondary text-on-secondary transition-all cursor-pointer" onclick="selectPizzaSize('Meat Lovers', 'Medium', 17.75, this)">
+                        Med $17.75
+                      </button>
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-semibold bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" onclick="selectPizzaSize('Meat Lovers', 'Large', 22.25, this)">
+                        Lrg $22.25
+                      </button>
+                    </div>
+                  </div>
+                  <button class="w-full py-2.5 px-4 rounded-full bg-primary text-on-primary font-bold text-label-md hover:bg-primary-container transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md" onclick="addSelectedPizzaToCart('Meat Lovers')">
+                    <span class="material-symbols-outlined text-sm font-bold">add_shopping_cart</span> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Taco Pizza (Interactive Size Selectors) -->
+            <div class="menu-item pizza bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAD2XXwjrJGqRnN8RNlv5YEbAhaqdam0IkA4vBAxdrZSiJ_B7ArW-oluvSP7Xt5eKCOhxJMLW7M_BzJKrto7xqZa1RhCL89n_Rhdni3lV2UN8sIs-je2uoywYfHXhbkgtWuCRfxZnmPKKb2r9x4IVAQoRHwJXAq2FuTMQfnlogobPA4B0mkiJJq4lMucYkzkVUinC62LmWYwEV3Ck-4vPT1Unwav3NPnRl-f992k6A')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-secondary">Specialty</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <h3 class="font-headline-sm text-on-surface">Taco Pizza</h3>
+                    <span class="font-headline-sm text-secondary font-bold text-title-lg" id="price-Taco-Pizza">$19.30</span>
+                  </div>
+                  <p class="text-body-sm text-outline mt-1 mb-3">Seasoned beef, onions, lettuce, tomatoes, black olives, cheddar cheese &amp; spicy taco sauce.</p>
+                </div>
+                <!-- Size Selector (Small, Med, Large) -->
+                <div class="space-y-3 pt-2 border-t border-outline-variant/10">
+                  <div class="flex items-center justify-between text-body-sm">
+                    <span class="text-outline text-xs">Crust Size:</span>
+                    <div class="flex items-center gap-1.5 size-selector-group" data-pizza="Taco Pizza">
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-semibold bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" onclick="selectPizzaSize('Taco Pizza', 'Small', 15.80, this)">
+                        Small $15.80
+                      </button>
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-bold bg-secondary text-on-secondary transition-all cursor-pointer" onclick="selectPizzaSize('Taco Pizza', 'Medium', 19.30, this)">
+                        Med $19.30
+                      </button>
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-semibold bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" onclick="selectPizzaSize('Taco Pizza', 'Large', 24.50, this)">
+                        Lrg $24.50
+                      </button>
+                    </div>
+                  </div>
+                  <button class="w-full py-2.5 px-4 rounded-full bg-primary text-on-primary font-bold text-label-md hover:bg-primary-container transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md" onclick="addSelectedPizzaToCart('Taco Pizza')">
+                    <span class="material-symbols-outlined text-sm font-bold">add_shopping_cart</span> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Supreme Pizza (Interactive Size Selectors) -->
+            <div class="menu-item pizza bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCld4eOr3fqsI7bGyeBCi0QA15PSCtZvhFoXtbaSe4BjWr5PPRxa24DOGKxUDj_iCT1NWVVR_3wdHqmBM2_Z_hNvb4ThbJONIe6Fete28xIymaMZJUWJNm-OYujGEEjwXK6LbZvBIoF1WWc_FsDCqsJ7TR2ChlBPzX4CAv6wInhvZYvDtJJmzEByyS-gA6xtq7qCotzCvUBhAERYCY-yFcU9MFhlQTi0IeXKVOpjqA')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-secondary">Specialty</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <h3 class="font-headline-sm text-on-surface">Supreme Pizza</h3>
+                    <span class="font-headline-sm text-secondary font-bold text-title-lg" id="price-Supreme-Pizza">$19.30</span>
+                  </div>
+                  <p class="text-body-sm text-outline mt-1 mb-3">Pepperoni, ham, sausage, beef, mushrooms, onions, green peppers and green olives.</p>
+                </div>
+                <!-- Size Selector (Small, Med, Large) -->
+                <div class="space-y-3 pt-2 border-t border-outline-variant/10">
+                  <div class="flex items-center justify-between text-body-sm">
+                    <span class="text-outline text-xs">Crust Size:</span>
+                    <div class="flex items-center gap-1.5 size-selector-group" data-pizza="Supreme Pizza">
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-semibold bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" onclick="selectPizzaSize('Supreme Pizza', 'Small', 15.80, this)">
+                        Small $15.80
+                      </button>
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-bold bg-secondary text-on-secondary transition-all cursor-pointer" onclick="selectPizzaSize('Supreme Pizza', 'Medium', 19.30, this)">
+                        Med $19.30
+                      </button>
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-semibold bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" onclick="selectPizzaSize('Supreme Pizza', 'Large', 24.50, this)">
+                        Lrg $24.50
+                      </button>
+                    </div>
+                  </div>
+                  <button class="w-full py-2.5 px-4 rounded-full bg-primary text-on-primary font-bold text-label-md hover:bg-primary-container transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md" onclick="addSelectedPizzaToCart('Supreme Pizza')">
+                    <span class="material-symbols-outlined text-sm font-bold">add_shopping_cart</span> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. BBQ Pizza (Interactive Size Selectors) -->
+            <div class="menu-item pizza bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxlfIxuoyi3W9uio6ZelntbY81QnXUwn0W--pLtZ-QXnKAHtvvnyQtdYgquQIa4J0rJCx3vU2Gif-IZgwRHy1Brp49cz9JHCIAi4Afs7h7s0kKj_iEgMykcQYuEUP7N9WvPlQDcpzQPg6u-5Ufx7wEUKoEYCXnGkTWhTDS4DX-BQJzGe73mhJ58DXOONw1BmWZmMF7Oz-8sUjhiXfu_5HtWtbq_UnKcCEpRQCdVEo')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-secondary">Specialty</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <h3 class="font-headline-sm text-on-surface">BBQ Pizza</h3>
+                    <span class="font-headline-sm text-secondary font-bold text-title-lg" id="price-BBQ-Pizza">$17.75</span>
+                  </div>
+                  <p class="text-body-sm text-outline mt-1 mb-3">Shredded BBQ beef with rich homemade pizza sauce, mozzarella and provolone.</p>
+                </div>
+                <!-- Size Selector (Small, Med, Large) -->
+                <div class="space-y-3 pt-2 border-t border-outline-variant/10">
+                  <div class="flex items-center justify-between text-body-sm">
+                    <span class="text-outline text-xs">Crust Size:</span>
+                    <div class="flex items-center gap-1.5 size-selector-group" data-pizza="BBQ Pizza">
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-semibold bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" onclick="selectPizzaSize('BBQ Pizza', 'Small', 14.60, this)">
+                        Small $14.60
+                      </button>
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-bold bg-secondary text-on-secondary transition-all cursor-pointer" onclick="selectPizzaSize('BBQ Pizza', 'Medium', 17.75, this)">
+                        Med $17.75
+                      </button>
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-semibold bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" onclick="selectPizzaSize('BBQ Pizza', 'Large', 22.25, this)">
+                        Lrg $22.25
+                      </button>
+                    </div>
+                  </div>
+                  <button class="w-full py-2.5 px-4 rounded-full bg-primary text-on-primary font-bold text-label-md hover:bg-primary-container transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md" onclick="addSelectedPizzaToCart('BBQ Pizza')">
+                    <span class="material-symbols-outlined text-sm font-bold">add_shopping_cart</span> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Shrimp Pizza (Interactive Size Selectors) -->
+            <div class="menu-item pizza bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCq4mAJkN0pQnErudTwxbu_b-BMR_jMlTMdpE67MoWqd7uwZ4fOZEEGycT76jvQ3OLoVSSdOhTo2zYEpFdwNXWBc9cbxvYVhdsPY8F6Hpedre_8FNIaT4Ffl8AjKTqhdS_6VoixxCVnhiWcM_2Qv5V0zKwjasQxOkTNXRONFEt_KzUZFXTv9AvyiCWQ9_IygfARg2lFfLaXXzkTjNExtUyU-u_rWAPLtxLTOYljsYk')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-secondary">Specialty</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <h3 class="font-headline-sm text-on-surface">Shrimp Pizza</h3>
+                    <span class="font-headline-sm text-secondary font-bold text-title-lg" id="price-Shrimp-Pizza">$14.00</span>
+                  </div>
+                  <p class="text-body-sm text-outline mt-1 mb-3">Loaded with Gulf shrimp, covered with cajun seasoning and melted cheeses.</p>
+                </div>
+                <!-- Size Selector (Small, Med, Large) -->
+                <div class="space-y-3 pt-2 border-t border-outline-variant/10">
+                  <div class="flex items-center justify-between text-body-sm">
+                    <span class="text-outline text-xs">Crust Size:</span>
+                    <div class="flex items-center gap-1.5 size-selector-group" data-pizza="Shrimp Pizza">
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-semibold bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" onclick="selectPizzaSize('Shrimp Pizza', 'Small', 11.30, this)">
+                        Small $11.30
+                      </button>
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-bold bg-secondary text-on-secondary transition-all cursor-pointer" onclick="selectPizzaSize('Shrimp Pizza', 'Medium', 14.00, this)">
+                        Med $14.00
+                      </button>
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-semibold bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" onclick="selectPizzaSize('Shrimp Pizza', 'Large', 17.75, this)">
+                        Lrg $17.75
+                      </button>
+                    </div>
+                  </div>
+                  <button class="w-full py-2.5 px-4 rounded-full bg-primary text-on-primary font-bold text-label-md hover:bg-primary-container transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md" onclick="addSelectedPizzaToCart('Shrimp Pizza')">
+                    <span class="material-symbols-outlined text-sm font-bold">add_shopping_cart</span> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Hawaiian Pizza (Interactive Size Selectors) -->
+            <div class="menu-item pizza bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlwefwB933arUlRETDU67DezTOxS4l3Rxz75tXaR27v6oWpiebwOpALE-3jyQIUpT81IG8gzdk-3YgA8vhAs0QVlpnSj2rYecMKkRABXl7BuUvdF4qoKusibNyW12LFh37edR84bHqGfLI0LSBpgMJa3DRnvi9PYUnvDa2GZSMat-TgfUZ8l9H4BxVK4RYB4bXqhRWR1tc0ZNHXzgsSC3p4aOknPnS600gBDsxpPk')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-secondary">Specialty</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-1">
+                    <h3 class="font-headline-sm text-on-surface">Hawaiian Pizza</h3>
+                    <span class="font-headline-sm text-secondary font-bold text-title-lg" id="price-Hawaiian-Pizza">$14.00</span>
+                  </div>
+                  <p class="text-body-sm text-outline mt-1 mb-3">Classic combination of savory ham and sweet juicy pineapple chunks.</p>
+                </div>
+                <!-- Size Selector (Small, Med, Large) -->
+                <div class="space-y-3 pt-2 border-t border-outline-variant/10">
+                  <div class="flex items-center justify-between text-body-sm">
+                    <span class="text-outline text-xs">Crust Size:</span>
+                    <div class="flex items-center gap-1.5 size-selector-group" data-pizza="Hawaiian Pizza">
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-semibold bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" onclick="selectPizzaSize('Hawaiian Pizza', 'Small', 11.30, this)">
+                        Small $11.30
+                      </button>
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-bold bg-secondary text-on-secondary transition-all cursor-pointer" onclick="selectPizzaSize('Hawaiian Pizza', 'Medium', 14.00, this)">
+                        Med $14.00
+                      </button>
+                      <button type="button" class="size-btn px-2.5 py-1 rounded-full text-label-xs font-semibold bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all cursor-pointer" onclick="selectPizzaSize('Hawaiian Pizza', 'Large', 17.75, this)">
+                        Lrg $17.75
+                      </button>
+                    </div>
+                  </div>
+                  <button class="w-full py-2.5 px-4 rounded-full bg-primary text-on-primary font-bold text-label-md hover:bg-primary-container transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md" onclick="addSelectedPizzaToCart('Hawaiian Pizza')">
+                    <span class="material-symbols-outlined text-sm font-bold">add_shopping_cart</span> Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7. Supreme Po-Boy -->
+            <div class="menu-item poboys bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDRRE4h5_rHYnfIg0NQv9KLrBPXCSSBrRQEiKvJEtpU2f_eHWsA7e7WabiGg2ifqULy3pyr4IYzZDq4DwhhEkH6j40Gmb2rsbVWdL2HOs09P81x_i1Y-QBCQJb7CCoFT9sJDpWyCgvs3n6P1LgFwywcuF6RmQFobVcQ4KpO2Nj5g9UUsiL9SZwHLXab6noO7Y5PcQybCaS0Vg6R5SH_xMFDG8_fBBFPw_z8gGpRvbg')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-tertiary">Po-Boy</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <h3 class="font-headline-sm text-on-surface">Supreme Po-Boy</h3>
+                  <p class="text-body-sm text-outline mt-1">Ham, salami, onions, mozzarella &amp; provolone. Dressed with lettuce and tomatoes.</p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-sm border-t border-outline-variant/10">
+                  <div class="text-title-md text-secondary font-bold">$10.00</div>
+                  <button class="p-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all flex items-center justify-center cursor-pointer shadow" onclick="addToCart('Supreme Po-Boy', 10.00, 'Standard')">
+                    <span class="material-symbols-outlined text-sm font-bold">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8. Stromboli Po-Boy -->
+            <div class="menu-item poboys bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuARqP5SGJUeC_kAL0PspttVikW-pkQORtwUitB2ZqrVyeBtiJ7WrAyoUtCr5hnMlC3ucRFAm_D9rltYRZr60POHPVmOMT1qwKbtdemrCS6KnkdOey1q3DxFXnl7gHICe3CxCm1Zbtqp5B9Vv4ipU0LAupqLtmSx4J3rS2O-NvHmkzvo6eTTXSs3uI5VrHvfI3aZGwIUwCLGR8rstoZvEu4k65GsuxjL7pv9_AtUfY4')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-tertiary">Po-Boy</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <h3 class="font-headline-sm text-on-surface">Stromboli Po-Boy</h3>
+                  <p class="text-body-sm text-outline mt-1">Salami, pepperoni, sausage, onions, green peppers, pizza sauce, mozzarella &amp; provolone.</p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-sm border-t border-outline-variant/10">
+                  <div class="text-title-md text-secondary font-bold">$10.00</div>
+                  <button class="p-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all flex items-center justify-center cursor-pointer shadow" onclick="addToCart('Stromboli Po-Boy', 10.00, 'Standard')">
+                    <span class="material-symbols-outlined text-sm font-bold">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 9. Meatball Sub -->
+            <div class="menu-item poboys bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCb7kcrlgXBaHAocRcI-pm4Ai_PAhKR0eMsXf-SRwLEghNZVD5zISjmiEOU0fkeqOo5SLh8cExcXVcDmQyvRrmhNFSfKteVi36TPBnbB5JLb02f5WfZlJAGG7jkkEEPQ6Id-daWL12yg0rXPlaCFO7k8Q0qox2QLCYMQ2EBKAu-NJklM6YiYjp21LCYYMFfA0yW9PllntQoqRN18lMSjBOrClceB0h-n90abDPDgUY')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-tertiary">Po-Boy</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <h3 class="font-headline-sm text-on-surface">Meatball Sub</h3>
+                  <p class="text-body-sm text-outline mt-1">Italian meatballs with pizza sauce covered in mozzarella &amp; provolone cheese.</p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-sm border-t border-outline-variant/10">
+                  <div class="text-title-md text-secondary font-bold">$10.00</div>
+                  <button class="p-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all flex items-center justify-center cursor-pointer shadow" onclick="addToCart('Meatball Sub', 10.00, 'Standard')">
+                    <span class="material-symbols-outlined text-sm font-bold">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 10. Sausage Turnover -->
+            <div class="menu-item turnovers bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBCEv4bIN1a1eD4iWdNqb6Z6Mw4PqQAoA2U7IJX09apoVge6--46KLbi1367729eK43KvDqxosKvsDVrr34rmaZI3gxQjh5N-T7_e7L_Zi4_PdtNQFLKUfKnC96z_dVLbbeDLjCOzY2mX2at3bvv56M24VTnaODH24nCRbFkox6L_gFJCWD51MOF0UPXOxMMX8AVBZueYHwZJXkpFEx_VBLuyEDQwC-MqDR2IPnY2Q')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-primary">Turnover</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <h3 class="font-headline-sm text-on-surface">Sausage Turnover</h3>
+                  <p class="text-body-sm text-outline mt-1">Italian sausage, onions, green peppers, pizza sauce, mozzarella &amp; provolone cheese.</p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-sm border-t border-outline-variant/10">
+                  <div class="text-title-md text-secondary font-bold">$8.00</div>
+                  <button class="p-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all flex items-center justify-center cursor-pointer shadow" onclick="addToCart('Sausage Turnover', 8.00, 'Standard')">
+                    <span class="material-symbols-outlined text-sm font-bold">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 11. Meat Lovers Turnover -->
+            <div class="menu-item turnovers bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCA3rSfBm3Ph-CAGGMSWSHVCCyWMaKFl7GrI9Ogq7T9_4eUtNRC8HhRE6nwxqdDdFYCurE4OT-ZJ7QCZEcFz2exAIv8yjr4hN3eBdXvaM2qIhrneKaOaZ5SdpUqhVaClyC07doAwBmnNi2A-l62Gruq4x7pS2xok8jQ2WRiFsV2YOxnMlzQZBxdE5mo420JWH_e1WF8lSRSOwOPl_prx2Xvd_vV--5MntlIcUAhTiw')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-primary">Turnover</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <h3 class="font-headline-sm text-on-surface">Meat Lovers Turnover</h3>
+                  <p class="text-body-sm text-outline mt-1">Ham, sausage, pepperoni, pizza sauce, mozzarella &amp; provolone cheese.</p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-sm border-t border-outline-variant/10">
+                  <div class="text-title-md text-secondary font-bold">$8.00</div>
+                  <button class="p-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all flex items-center justify-center cursor-pointer shadow" onclick="addToCart('Meat Lovers Turnover', 8.00, 'Standard')">
+                    <span class="material-symbols-outlined text-sm font-bold">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 12. Spaghetti & Garlic Bread -->
+            <div class="menu-item sides bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKQ8bgjJz1GXYe3tfFTnuyrjeVfgYHe2MNQWc9ZLpwE-Qxr0zid1WVsxpxSjFmcIq41DLlyRgwS8cEEWjYoQAMU9hok6bu9nBJ2sgI8dvPBT9eCkH7xdV4UvzJJZoftDtuV8DBXXsEK6Zn3CIrHCUcuCfXYRrX08HHvqIEtgw0-Sa6qQU0Hzq1lSoGB_BGc_oOS7ad2EouY72gizawO9FbzKLyiCdUGR2EBnHX6Gk')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-tertiary">Side</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <h3 class="font-headline-sm text-on-surface">Spaghetti &amp; Garlic Bread</h3>
+                  <p class="text-body-sm text-outline mt-1">Pasta covered with meat sauce, served with warm buttery garlic bread.</p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-sm border-t border-outline-variant/10">
+                  <div class="text-title-md text-secondary font-bold">$9.00</div>
+                  <button class="p-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all flex items-center justify-center cursor-pointer shadow" onclick="addToCart('Spaghetti &amp; Garlic Bread', 9.00, 'Standard')">
+                    <span class="material-symbols-outlined text-sm font-bold">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 13. Hot Wings (6 pcs) -->
+            <div class="menu-item sides bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVaotDUvvSp7_lRxIfWxIMk_HljJeZax2yuj3vAYbntjjp7er497cRVdZvfeT6pvQK8nBaSK4tYC9RPLiR0Sy8_ohrbTvf6VKIheNbiEJjXRPGt2lnKwFwyjV6Fd-xWcRr3nS_pIudXZeY6oX0lwkGrprPLojRmC-LNyLbM7-A1J-QRfJn22pYHCGPO4qciNupIIheiNFxlxriKpUP0TcJM-XxBVyhEiACBKsvChs')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-tertiary">Side</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <h3 class="font-headline-sm text-on-surface">Hot Wings (6 pcs)</h3>
+                  <p class="text-body-sm text-outline mt-1">6 pieces of hot and spicy chicken wings tossed in signature sauce.</p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-sm border-t border-outline-variant/10">
+                  <div class="text-title-md text-secondary font-bold">$7.00</div>
+                  <button class="p-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all flex items-center justify-center cursor-pointer shadow" onclick="addToCart('Hot Wings (6 pcs)', 7.00, 'Standard')">
+                    <span class="material-symbols-outlined text-sm font-bold">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 14. Cheesy Bread Strips -->
+            <div class="menu-item sides bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfNB7wtNe9gSsNsGkaxpM9GD5Kd19ZgzqPTTzZoLf2cLSSZssDfyoZwCkHiOM2vFCsIgbH6jcJ2dsnCPAxU7j-Yt84OQzS1VlsTZh67lIF4OVIz31oq9_7W8SXoi4DljOooC8qRpuwCC0tMBNddQT_PpqyjH9SDlUUC0-DpmLHkB38LQS3A4ofmedIV7ajBtFf7gSFLVJLenyDkMY9CPsq8CWoHVqWYZ-Q1ujr9rI')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-tertiary">Side</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <h3 class="font-headline-sm text-on-surface">Cheesy Bread Strips</h3>
+                  <p class="text-body-sm text-outline mt-1">Fresh dough with mozzarella &amp; provolone, served with butter garlic &amp; marinara.</p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-sm border-t border-outline-variant/10">
+                  <div class="text-title-md text-secondary font-bold">$7.00</div>
+                  <button class="p-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all flex items-center justify-center cursor-pointer shadow" onclick="addToCart('Cheesy Bread Strips', 7.00, 'Standard')">
+                    <span class="material-symbols-outlined text-sm font-bold">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 15. Fountain Soda / Dr. Pepper -->
+            <div class="menu-item drinks bg-surface-container-low rounded-xl overflow-hidden flex flex-col justify-between border border-outline-variant/10 hover:border-secondary/50 transition-all reveal-on-scroll">
+              <div class="h-48 bg-cover bg-center relative" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSnu8nv71GbCP-wAULik82seA40MhedihCmE0EAy40_hYhzaHGpLeBQhFrwlD2TEXWLbKVAmcFNTzHoQDMigWFc8inVLk_gx3R4QQmZ5ITtdmyTBvrXnvQHl67ssPRARW2f4K8GhFkQPhsBmpG6gpwE5UQjhRFrBF-TyuhJTZnN930nb1D0pQ3S_z1mWvL1NO-2suD2zZT1-SuW_RHhv-r2gIvjYxX32hhehTS4CQ')">
+                <span class="absolute top-3 right-3 bg-surface/80 backdrop-blur px-3 py-1 rounded-full text-label-sm text-tertiary">Beverage</span>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-sm flex-1 justify-between">
+                <div>
+                  <h3 class="font-headline-sm text-on-surface">Fountain Soda / Dr. Pepper</h3>
+                  <p class="text-body-sm text-outline mt-1">Coke, Sprite, Dr. Pepper, Root Beer, Diet Coke, Diet Dr. Pepper.</p>
+                </div>
+                <div class="flex items-center justify-between mt-space-md pt-space-sm border-t border-outline-variant/10">
+                  <div class="text-title-md text-secondary font-bold">$3.00</div>
+                  <button class="p-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-container transition-all flex items-center justify-center cursor-pointer shadow" onclick="addToCart('Fountain Soda', 3.00, 'Standard')">
+                    <span class="material-symbols-outlined text-sm font-bold">add</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- DELIVERY ZONE CHECKER & MAP (#location-section) -->
+        <div class="bg-surface-container-low rounded-2xl p-space-xl flex flex-col md:flex-row items-center justify-between gap-space-xl reveal-on-scroll" id="location-section">
+          <div class="flex flex-col gap-space-md max-w-lg">
+            <span class="text-label-sm text-secondary uppercase tracking-widest">Delivery &amp; Pickup</span>
+            <h2 class="font-headline-md text-on-surface">Check Your Delivery Zone</h2>
+            <p class="text-body-md text-outline">We deliver fast across Chauvin, Cocodrie, and surrounding Terrebonne Parish coastal communities.</p>
+            <div class="flex gap-2 mt-2">
+              <input class="bg-surface px-4 py-3 rounded-full text-on-surface border border-outline-variant/20 focus:border-secondary outline-none flex-1 text-label-md" id="zip-input" placeholder="Enter Zip (e.g. 70344)" type="text" />
+              <button class="px-6 py-3 rounded-full bg-secondary text-on-secondary font-bold text-label-md hover:bg-secondary-fixed transition-all cursor-pointer" onclick="checkDelivery()">Check</button>
+            </div>
+            <div class="text-body-sm text-secondary font-bold" id="delivery-result"></div>
+          </div>
+          <div class="w-full md:w-1/2 h-72 bg-cover bg-center rounded-xl border border-outline-variant/20 relative overflow-hidden" data-location="Chauvin, LA 70344" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDp8Ve0QMJKRTQ0YeNiLrpjxJq5rjYwwmil15Bxj2MgaliFPYj_nW6zHUBdM5Vk2k8tvewtMvvsN5s-HTQyYhxqZKoxk9MKg1H_ghc4hFx7eGbMPjva9bOc6SSXVjLSupSC0r1JDLYFMzHa-ngsxWsCMqSyV1bK0jLfFi5pba4cNUqArBtWQ1HobJioLA2IohOM-FSbYwx52KVMKYeCXBXxHYiSMCFY7IdkEe0tfVJlYGVQmlT0c6Uu')">
+            <div class="absolute inset-0 bg-surface/30"></div>
+            <div class="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-surface-container-high/90 backdrop-blur-md flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary text-lg">storefront</span>
+                <span class="text-label-sm text-on-surface font-semibold">5534 LA-56, Chauvin, LA 70344</span>
+              </div>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-label-xs font-bold whitespace-nowrap">OVEN FIRED</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SLIDE-OVER INTERACTIVE CART DRAWER (#cart-drawer) (CALL TO PAY SECTION ONLY) -->
+    <div class="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-surface-container-highest shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col" id="cart-drawer">
+      <div class="p-space-lg flex items-center justify-between border-b border-outline-variant/20">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary">local_pizza</span>
+          <h3 class="text-title-lg text-on-surface">Your Order (<span id="cart-count">0</span>)</h3>
+        </div>
+        <button class="p-2 rounded-full hover:bg-surface-container text-on-surface-variant cursor-pointer" onclick="toggleCart()">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <!-- Cart Item Container -->
+      <div class="flex-1 overflow-y-auto p-space-lg flex flex-col gap-space-md" id="cart-items-container">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- Cart Footer & DIRECT CALL TO PAY ONLY (No promo codes, no checkout modal) -->
+      <div class="p-space-lg border-t border-outline-variant/20 flex flex-col gap-space-md bg-surface-container-low">
+        <div class="flex justify-between text-body-md text-outline">
+          <span>Subtotal</span>
+          <span id="cart-subtotal" class="text-on-surface font-semibold">$0.00</span>
+        </div>
+        <div class="flex justify-between text-body-md text-outline">
+          <span>Tax (9.45%)</span>
+          <span id="cart-tax" class="text-on-surface font-semibold">$0.00</span>
+        </div>
+        <div class="flex justify-between text-title-md text-on-surface pt-space-xs border-t border-outline-variant/10">
+          <span>Total</span>
+          <span class="text-secondary font-bold text-headline-sm" id="cart-total">$0.00</span>
+        </div>
+
+        <!-- DIRECT CALL TO PAY SECTION -->
+        <div class="pt-2 flex flex-col gap-2.5">
+          <a class="w-full py-4 px-6 rounded-full bg-secondary text-on-secondary font-bold text-label-lg hover:bg-secondary-fixed transition-all shadow-[0_4px_24px_rgba(255,185,95,0.4)] flex items-center justify-center gap-2.5 text-center cursor-pointer" href="tel:19855943112">
+            <span class="material-symbols-outlined text-2xl">call</span> Call to Order &amp; Pay: +1 985-594-3112
+          </a>
+          <p class="text-body-sm text-outline text-center leading-relaxed">
+            Call our Chauvin kitchen directly to place your order and pay over the phone: <strong class="text-secondary">(985) 594-3112</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-lowest py-margin text-on-surface-variant" style="background-color: #000000 !important;">
+    <div class="max-w-[1360px] mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-space-xl">
+      <div class="flex flex-col gap-space-sm">
+        <span class="font-headline-sm text-on-surface">Pizza Express Chauvin</span>
+        <p class="text-body-sm text-outline">Wood-fired artisanal Neapolitan pizza crafted with local Louisiana soul in the heart of Chauvin.</p>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="text-label-lg text-on-surface font-bold">Visit Us</span>
+        <p class="text-body-sm">5483 Chauvin Rd</p>
+        <p class="text-body-sm">Chauvin, LA 70344</p>
+        <p class="text-body-sm">Phone: (985) 555-PIZZA</p>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <span class="text-label-lg text-on-surface font-bold">Hours</span>
+        <p class="text-body-sm">Tue - Thu: 11:00 AM - 9:00 PM</p>
+        <p class="text-body-sm">Fri - Sat: 11:00 AM - 10:00 PM</p>
+        <p class="text-body-sm">Sun - Mon: Closed</p>
+      </div>
+    </div>
+    <div class="max-w-[1360px] mx-auto px-gutter mt-space-xl pt-space-md border-t border-outline-variant/20 text-center text-body-sm text-outline">
+      © 2026 Pizza Express Chauvin, LA. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

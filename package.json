@@ -1,0 +1,20 @@
+{
+  "name": "crust-to-crave-pizza-express",
+  "version": "1.0.0",
+  "description": "Crust To Crave - High-Performance Animated Pizza Website with Canvas Scrubbing & Phone-in Ordering",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "pizza",
+    "animation",
+    "canvas",
+    "interactive",
+    "restaurant",
+    "vercel"
+  ],
+  "author": "shadow591195-hub",
+  "license": "ISC"
+}

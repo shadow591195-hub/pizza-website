@@ -2,6 +2,10 @@
 
 An interactive, high-performance artisanal pizza web experience featuring a 193-frame cinema baking scroll animation, responsive glassmorphism navigation, dynamic crust sizing, and direct call-to-order workflow.
 
+> 🌐 **Live 24/7 Website**: **[https://shadow591195-hub.github.io/pizza-website/](https://shadow591195-hub.github.io/pizza-website/)**
+> 
+> *Hosted permanently on GitHub Pages — always online even when local tools or Antigravity are closed.*
+
 ---
 
 ## 🍕 Features
